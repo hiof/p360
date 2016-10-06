@@ -1,0 +1,16 @@
+{
+  "name": "p360",
+  "homepage": "https://github.com/hiof/p360",
+  "authors": [
+    "Kenneth Lindbeck-Dahlstrøm <kld@hiof.no>"
+  ],
+  "description": "A plugin to style the openGov meetings module for Public360",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "sass-mq": "~3.2.2",
+    "bootstrap-sass": "~3.3.5",
+    "hiof-colors": "https://github.com/hiof/colors.git",
+    "hiof-layout": "https://github.com/hiof/layout.git",
+    "hiof-typography": "https://github.com/hiof/typography.git"
+  }
+}

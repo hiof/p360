@@ -1,0 +1,209 @@
+/*
+
+## Component: p360
+
+*/
+
+
+/*
+
+### Import Media Query plugin
+
+- sass-mq
+
+
+```css
+@import '../../../vendor/sass-mq/mq';
+```
+
+
+*/
+
+@import '../../../vendor/sass-mq/mq';
+
+/*
+
+### Import HiØ variables
+
+- sass-mq
+
+
+```css
+@import '../../../vendor/sass-mq/mq';
+```
+
+
+*/
+
+@import '../../../vendor/frontend/app/assets/sass/variables/_standard.scss';
+
+
+/*
+
+### Import color library
+
+- color
+
+
+```css
+@import '../../../vendor/hiof-colors/dist/colors.css';
+```
+
+
+*/
+
+@import '../../../vendor/hiof-colors/dist/colors';
+
+
+// Color overrides
+a, .on td, .on td a, .on td i, .SideBarItem a.last, .tabs a, .OpenGovColor, a.monthSelected, a.dateFilterSelected, .sbHolder .sbSelector, .sbOptions a, .sbOptions a:focus, .sbOptions a.sbFocus{
+
+  color: $color-primary-action !important;
+  &:hover{
+    color: $hoverColour !important;
+  }
+
+}
+.highlightTabs{
+  border-bottom-color: $color-primary-action !important;
+}
+.home .tile .wrap .text, .home .tileDate, .SideBarItem a.last span, .nextYear a, .previousYear a, #boards.SideBarItem a, #lista1 .als-prev, #lista1 .als-next, h2.slideTitle, .sbHolder .sbToggle, .sbToggleOpen, .sbToggle{
+  &:hover{
+    background-color: $color-primary-action !important;
+    color: $white !important;
+  }
+  border-radius: $border-radius-standard !important;
+}
+#boards.SideBarItem a, .tabs a{
+
+  &:hover{
+    text-decoration: none !important;
+  }
+}
+/*
+
+### Import typography library
+
+- sass-mq
+
+
+```css
+@import '../../../vendor/hiof-typography/dist/typography.css';
+```
+
+
+*/
+
+@import '../../../vendor/hiof-typography/dist/typography';
+
+
+// Typography overrides
+html {
+    font-size: 62.5% !important;
+    -ms-text-size-adjust: 100% !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+body, .body, #body {
+    font-size: 1.8rem !important;
+    line-height: 1.8em !important;
+    font-family: "Source Sans Pro", sans-serif !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+}
+
+.siteTitle{
+  @extend h2;
+  font-weight: 300 !important;
+  color: $text-color !important;
+}
+h1{
+  @extend h1;
+  font-weight: 300 !important;
+  color: $text-color !important;
+}
+h2.newstyle{
+  @extend h2;
+  font-weight: 300 !important;
+  color: $text-color !important;
+}
+h3, h3.newstyle {
+  @extend h3;
+  font-weight: 300 !important;
+  color: $text-color !important;
+}
+
+
+/*
+
+### Import layout library
+
+- layout
+
+
+```css
+@import '../../../vendor/hiof-layout/dist/layout.css';
+```
+
+
+*/
+
+@import '../../../vendor/hiof-layout/dist/layout';
+
+// Layout overr
+#content, .content, #sidebar, .sidebar{
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+}
+
+
+
+
+
+// general hacks
+
+
+.fontSize {
+  margin-left: 134px;
+  margin-top: -24px;
+}
+ul.dateFilter li{
+  width: auto !important;
+  float: none !important;
+  display: inline !important;
+}
+ul li{
+  list-style: disc;
+}
+
+ul.breadcrumb li{
+  float: none !important;
+  padding-right: 0 !important;
+  margin-left: 1rem !important;
+}
+
+.search > form > a{
+  float: right;
+  margin-top: -4px;
+  margin-right: 5px;
+}
+.SideBarItem{
+    line-height: 1.2em;
+}
+.SideBarItem ul li{
+  list-style: none;
+  a{
+
+    background: $white !important;
+    color: $color-primary-action !important;
+    &:hover{
+      background: #eee !important;
+    }
+  }
+}
+.agendaDetails{
+  line-height: 1.2em;
+  a{
+    border-bottom: 0px !important;
+  }
+}

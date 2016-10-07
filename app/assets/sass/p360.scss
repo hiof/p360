@@ -34,9 +34,29 @@
 
 
 */
-
+@import '../../../vendor/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
 @import '../../../vendor/frontend/app/assets/sass/variables/_standard.scss';
 
+
+/*
+
+### Bootstrap btn library
+
+- bootstrap buttons
+
+
+```css
+@import '../../../vendor/sass-mq/mq';
+```
+
+
+*/
+
+@import '../../../vendor/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons';
+@import '../../../vendor/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_vendor-prefixes';
+@import '../../../vendor/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_tab-focus';
+@import '../../../vendor/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_opacity';
+@import '../../../vendor/bootstrap-sass/assets/stylesheets/bootstrap/_buttons';
 
 /*
 
@@ -80,6 +100,22 @@ a, .on td, .on td a, .on td i, .SideBarItem a.last, .tabs a, .OpenGovColor, a.mo
     text-decoration: none !important;
   }
 }
+
+.tabs a{
+  @extend .btn;
+  @extend .btn-primary;
+  color: $white !important;
+  width: auto !important;
+  float: none !important;
+  margin-top: 0 !important;
+  border: 0px !important;
+  &:hover{
+    padding-right: 12px !important;
+    color: $white !important;
+    border-bottom-width: 0px !important;
+  }
+  //@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
 /*
 
 ### Import typography library
@@ -107,7 +143,7 @@ html {
 body, .body, #body {
     font-size: 1.8rem !important;
     line-height: 1.8em !important;
-    font-family: "Source Sans Pro", sans-serif !important;
+    font-family: $body-font-family !important;
     font-style: normal !important;
     font-weight: 400 !important;
 }
@@ -116,23 +152,29 @@ body, .body, #body {
   @extend h2;
   font-weight: 300 !important;
   color: $text-color !important;
+  font-family: $h-font-family !important;
 }
 h1{
   @extend h1;
   font-weight: 300 !important;
   color: $text-color !important;
+  font-family: $h-font-family !important;
 }
 h2.newstyle{
   @extend h2;
   font-weight: 300 !important;
   color: $text-color !important;
+  font-family: $h-font-family !important;
 }
 h3, h3.newstyle {
   @extend h3;
   font-weight: 300 !important;
   color: $text-color !important;
+  font-family: $h-font-family !important;
 }
-
+.tabs{
+  font-family: $body-font-family !important;
+}
 
 /*
 
@@ -164,8 +206,7 @@ h3, h3.newstyle {
 
 
 .fontSize {
-  margin-left: 134px;
-  margin-top: -24px;
+  display: none;
 }
 ul.dateFilter li{
   width: auto !important;

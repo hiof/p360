@@ -1310,6 +1310,9 @@ img + .caption {
 #### HR screens
 
 */
+* {
+  font-family: "Source Sans Pro", sans-serif !important; }
+
 html {
   font-size: 62.5% !important;
   -ms-text-size-adjust: 100% !important;

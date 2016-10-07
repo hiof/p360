@@ -132,7 +132,9 @@ a, .on td, .on td a, .on td i, .SideBarItem a.last, .tabs a, .OpenGovColor, a.mo
 
 @import '../../../vendor/hiof-typography/dist/typography';
 
-
+*{
+  font-family: $body-font-family !important;
+}
 // Typography overrides
 html {
     font-size: 62.5% !important;
